@@ -1,0 +1,26 @@
+{
+  "recettes": [{
+    "nom" : "Crêpes",
+    "ingrédients": [
+      { "oeufs": 2 },
+      { "sucre": 3 },
+      { "beurre": 0.05 },
+      { "farine": 0.3 },
+      { "lait": 60 }
+    ],
+    "etapes": [
+      "Mettre la farine dans une terrine et former un puits.",
+      "Y déposer les oeufs entiers, le sucre, l'huile et le beurre.",
+      "Mélanger délicatement avec un fouet en ajoutant au fur et à mesure le lait. La pâte ainsi obtenue doit avoir une consistance d'un liquide légèrement épais.",
+      "Parfumer de rhum.",
+      "Faire chauffer une poêle antiadhésive et la huiler très légèrement. Y verser une louche de pâte, la répartir dans la poêle puis attendre qu'elle soit cuite d'un côté avant de la retourner. Cuire ainsi toutes les crêpes à feu doux."
+    ]
+  }],
+  "ingredients": [
+    { "nom": "oeuf", "prix": 3, "quantité": 6, "unite": "u" },
+    { "nom": "sucre", "prix": 2, "quantité": 1, "unité": "kg" },
+    { "nom": "beurre", "prix": 4, "quantité": 0.5, "unité": "kg" },
+    { "nom": "farine", "prix": 3, "quantité": 1, "unité": "kg" },
+    { "nom": "lait", "prix": 2, "quantité": 1, "unité": "L" }
+  ]
+}
