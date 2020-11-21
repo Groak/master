@@ -1,0 +1,30 @@
+{
+  "recettes": [
+    {
+      "id":0,
+      "nom": "Crêpes",
+      "image": "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/39ee5603-5ac4-4420-9563-11ae0ec17b41/Derivates/21ffd62c-8c68-43ac-9593-16c4c09e644d.jpg",
+      "ingredients": [
+        { "name": "oeuf", "quantity": 2 },
+        { "name": "sucre", "quantity": 3 },
+        { "name": "beurre", "quantity": 0.05 },
+        { "name": "farine", "quantity": 0.3 },
+        { "name": "lait", "quantity": 60 }
+      ],
+      "etapes": [
+        "Mettre la farine dans une terrine et former un puits.",
+        "Y déposer les oeufs entiers, le sucre, l'huile et le beurre.",
+        "Mélanger délicatement avec un fouet en ajoutant au fur et à mesure le lait. La pâte ainsi obtenue doit avoir une consistance d'un liquide légèrement épais.",
+        "Parfumer de rhum.",
+        "Faire chauffer une poêle antiadhésive et la huiler très légèrement. Y verser une louche de pâte, la répartir dans la poêle puis attendre qu'elle soit cuite d'un côté avant de la retourner. Cuire ainsi toutes les crêpes à feu doux."
+      ]
+    }
+  ],
+  "ingredients": [
+    { "id":0, "name": "oeuf", "prix": 3, "quantité": 6, "unite": "u" },
+    { "id":1, "name": "sucre", "prix": 2, "quantité": 1, "unité": "kg" },
+    { "id":2, "name": "beurre", "prix": 4, "quantité": 0.5, "unité": "kg" },
+    { "id":3, "name": "farine", "prix": 3, "quantité": 1, "unité": "kg" },
+    { "id":4, "name": "lait", "prix": 2, "quantité": 1, "unité": "L" }
+  ]
+}
