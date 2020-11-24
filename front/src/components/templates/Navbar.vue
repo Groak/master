@@ -1,5 +1,12 @@
 <template>
-  <div class="nav" :style= "[clicked ? {'background-color': 'white'} : {'background-color':'rgba(255, 255, 255, 0.774)'}]" >
+  <div
+    class="nav"
+    :style="[
+      clicked
+        ? { 'background-color': 'white' }
+        : { 'background-color': 'rgba(255, 255, 255, 0.774)' },
+    ]"
+  >
     <div class="container-fluid">
       <div class="row">
         <div class="col-3 d-flex justify-content-start">
@@ -25,7 +32,7 @@
               </select>
             </div>
           </div>
-          <div v-if="clicked" class="d-flex justify-content-start">
+          <div v-if="clicked" class="d-flex justify-content-between">
             <div class="available">
               <p class="text-left">diet</p>
               <select
@@ -41,6 +48,15 @@
                   >{{ facility.text }}</option
                 >
               </select>
+            </div>
+            <div class="search">
+              <button>
+                <router-link
+                  :to="{ name: 'recipesearch', params: { criteria: selectedFacilities[0] } }"
+                >
+                  Search</router-link
+                >
+              </button>
             </div>
           </div>
         </div>
@@ -79,7 +95,7 @@ export default {
         {
           value: 4,
           text: "sugar-free",
-        }
+        },
       ],
       selectedFacilities: [],
       availableFacilitiesSelectedValues: [],
@@ -87,6 +103,12 @@ export default {
     };
   },
   methods: {
+    sendMessage: function(event) {
+      if (event.key === "Enter") {
+        console.log("New line added, message not sended");
+        return;
+      }
+    },
     move(value, arrFrom, arrTo) {
       var index = arrFrom.findIndex(function(el) {
         return el.value == value;
@@ -139,7 +161,7 @@ export default {
   padding: 2px 10px 2px 10px;
   border-radius: 15px;
   margin-left: 10px;
-  color: #CC513F;
+  color: #cc513f;
 }
 .options {
   margin-top: 10px;
@@ -154,16 +176,16 @@ export default {
 }
 .searchbar {
   border-bottom: 2px solid black;
-  margin-top:15px;
+  margin-top: 15px;
 }
 .searchbar img {
   height: 20px;
   width: auto;
   margin-top: 10px;
 }
-.available p{
-    margin:10px 0px 0px 0px;
-    font-weight:bold;
+.available p {
+  margin: 10px 0px 0px 0px;
+  font-weight: bold;
 }
 .available_options {
   border: none;
@@ -178,5 +200,8 @@ export default {
   height: 20px;
   width: auto;
   margin: 10px 0px 0px 30px;
+}
+.search {
+  margin-top: 10px;
 }
 </style>

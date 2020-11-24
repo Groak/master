@@ -11,12 +11,31 @@
             <div class="icon d-flex justify-content-center">
               <img src="../assets/dollar.png" alt="" />
             </div>
-            <p>{{ getprice(recipe) }} €</p>
+            <p>{{ Math.round((2*getprice(recipe))/recipe.nombre) }} €</p>
           </div>
           <div class="info d-flex">
             <div class="icon d-flex justify-content-center">
               <img src="../assets/clock.png" alt="" />
             </div>
+            <p>{{time_convert(recipe.temps)}}</p>
+
+          </div>
+          <div class="info d-flex">
+            <div class="icon d-flex justify-content-center">
+              <img src="../assets/red user.png" alt="" />
+            </div>
+            <select name="" id="">
+              <option v-for="(n,i) in 8" :key="i"
+              :value="n">{{n}}</option>
+            
+            </select>
+
+          </div>
+          <div class="info d-flex">
+            <div v-for="tag in recipe.tags" :key="tag" class="tags">
+              <p>{{tag}}</p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -33,7 +52,7 @@
       <div class="w-100 d-flex justify-content-center">
         <ul class="text-left">
           <li v-for="ingredient in recipe.ingredients" :key="ingredient.id">
-            {{ ingredient.name }}
+            <span>{{ingredient.quantity}} </span><span>{{ ingredient.name }}</span>
           </li>
         </ul>
       </div>
@@ -52,17 +71,16 @@
         </div>
       </div>
       <div class="w-100 d-flex justify-content-center">
-          <div>
- <div
-          class="steps text-left"
-          v-for="(etape, i) in recipe.etapes"
-          :key="i"
-        >
-          <p class="step-title">- step {{ i }}:</p>
-          <p class="step">{{ etape }}</p>
-        </div>
+        <div>
+          <div
+            class="steps text-left"
+            v-for="(etape, i) in recipe.etapes"
+            :key="i"
+          >
+            <p class="step-title">- step {{ i+1 }}:</p>
+            <p class="step">{{ etape }}</p>
           </div>
-       
+        </div>
       </div>
     </div>
   </div>
@@ -71,10 +89,11 @@
 <script>
 export default {
   name: "Recipe",
+  title: (context) => `Client: ${context.recipe.nom}`,
   data() {
     return {
-      recipe: null,
-      ingredients: null,
+      recipe: {},
+      ingredients: [],
       loaded: false,
     };
   },
@@ -88,6 +107,8 @@ export default {
       .then(
         (response) => ((this.ingredients = response.data), (this.loaded = true))
       );
+      console.log(this.time_convert(70))
+      
   },
   methods: {
     getprice(recipe) {
@@ -97,11 +118,24 @@ export default {
           var ing = this.ingredients.find(
             (x) => x.name == recipe.ingredients[i].name
           );
-          price = +ing.prix * recipe.ingredients[i].quantity;
-          console.log(ing);
+  
+        
+          price += (ing.prix * Math.ceil(recipe.ingredients[i].quantity/ing.quantité));
         }
         return price;
       }
+    },
+    time_convert(num) {
+      var hours = Math.floor(num / 60);
+      var minutes = num % 60;
+      if(hours == 0){
+        var time = String(minutes + "min")
+      }else if(minutes == 0){
+        time = String(hours + "h")
+      }else{
+        time = String(hours + "h" + minutes + "min")
+      }
+      return time;
     },
   },
 };
@@ -131,12 +165,21 @@ h1 {
   font-weight: bold;
   font-style: italic;
 }
+.tags{
+
+  background-color: #f6e9e6;
+  padding: 2px 10px 2px 10px;
+  border-radius: 15px;
+  margin: 10px 10px 0px 0px;
+  color: #CC513F;
+}
 .description p {
   font-weight: bold;
   margin-left: 40px;
 }
 .icon {
   width: 20px;
+  margin-right: 10px;
 }
 .ingredients-section {
   margin-top: 30px;
@@ -160,10 +203,10 @@ h1 {
 ul {
   margin-bottom: 30px;
 }
-.step-title{
-    font-size:20px;
-    color: #CC513F;
-    font-weight: bold;
+.step-title {
+  font-size: 20px;
+  color: #cc513f;
+  font-weight: bold;
 }
 .step {
   margin-left: 40px;
@@ -172,11 +215,11 @@ ul {
   margin-bottom: 20px;
   max-width: 500px;
 }
-button{
-    background-color: #E6746A;
-    padding: 5px 10px 5px 10px;
-    border-radius: 15px;
-    color:white;
-    border:none;
+button {
+  background-color: #e6746a;
+  padding: 5px 10px 5px 10px;
+  border-radius: 15px;
+  color: white;
+  border: none;
 }
 </style>

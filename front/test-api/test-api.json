@@ -1,56 +1,298 @@
 {
-<<<<<<< HEAD
   "recettes": [
     {
-      "id":0,
+      "id": 0,
       "nom": "Crêpes",
       "image": "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/39ee5603-5ac4-4420-9563-11ae0ec17b41/Derivates/21ffd62c-8c68-43ac-9593-16c4c09e644d.jpg",
+      "temps": 40,
+      "nombre": 4,
       "ingredients": [
         { "name": "oeuf", "quantity": 2 },
-        { "name": "sucre", "quantity": 3 },
+        { "name": "sucre", "quantity": 0.1 },
         { "name": "beurre", "quantity": 0.05 },
         { "name": "farine", "quantity": 0.3 },
-        { "name": "lait", "quantity": 60 }
+        { "name": "lait", "quantity": 0.5 }
       ],
+      "description": "Les crêpes comme celles de votre grand mère !",
       "etapes": [
         "Mettre la farine dans une terrine et former un puits.",
         "Y déposer les oeufs entiers, le sucre, l'huile et le beurre.",
         "Mélanger délicatement avec un fouet en ajoutant au fur et à mesure le lait. La pâte ainsi obtenue doit avoir une consistance d'un liquide légèrement épais.",
         "Parfumer de rhum.",
         "Faire chauffer une poêle antiadhésive et la huiler très légèrement. Y verser une louche de pâte, la répartir dans la poêle puis attendre qu'elle soit cuite d'un côté avant de la retourner. Cuire ainsi toutes les crêpes à feu doux."
-      ]
+      ],
+      "tags":["veggie"]
+    },
+    {
+      "id": 1,
+      "nom": "Paëlla",
+      "image": "https://lacerisesurlemaillot.fr/wp-content/uploads/2017/10/RisottoPaella1-2.jpg",
+      "temps": 45,
+      "nombre": 4,
+      "ingredients": [
+        { "name": "riz", "quantity": 0.5 },
+        { "name": "calamar", "quantity": 0.5 },
+        { "name": "moules", "quantity": 0.1 },
+        { "name": "crevettes", "quantity": 0.1 },
+        { "name": "tomates", "quantity": 4 },
+        { "name": "oignon", "quantity": 2 },
+        { "name": "gousses d'ail", "quantity": 0.3 },
+        { "name": "huile", "quantity": 0.001 },
+        { "name": "bouillon", "quantity": 4 }
+      ],
+      "description": "Succombez à une délicieuse paëlla aux saveurs de la mer.",
+      "etapes": [
+        "Nettoyer les moules, peler et concasser les tomates, hacher les oignons et l'ail.",
+        "Mettre l'huile dans le plat ajouter les calamars, les oignons tout en remuant puis mettre les tomates, l'ail, du sel et du poivre. Laisser cuire 5 minutes en remuant avant d'incorporer le riz et le bouillon.",
+        "Y plonger les crevettes et les moules, porter à ébullition puis laisser cuire environ 30-35 minutes. C'est prêt !"
+      ],
+      "tags":["veggie","sugar-free"]
+
+    },
+    {
+      "id": 2,
+      "nom": "Gaspacho",
+      "image": "https://www.adeline-cuisine.fr/wp-content/uploads/2018/06/Gaspacho-recette-facile.jpg",
+      "temps": 15,
+      "nombre": 6,
+      "ingredients": [
+        { "name": "tomates", "quantity": 9 },
+        { "name": "poivron", "quantity": 3 },
+        { "name": "oignon", "quantity": 1 },
+        { "name": "concombre", "quantity": 1.5 },
+        { "name": "gousses d'ail", "quantity": 0.2 },
+        { "name": "vinaigre", "quantity": 0.001 },
+        { "name": "oeuf", "quantity": 0.3 },
+        { "name": "basilic", "quantity": 1 },
+        { "name": "huile", "quantity": 0.005 }
+      ],
+      "description": "Un gaspacho qui vous transportera dans un voyage de sensations.",
+      "etapes": [
+        "Couper les tomates, 2 poivrons, 1 concombre, l'oignon et l'ail, passer le tout au mixer.",
+        "Assaisonner avec sel,poivre, 4 cuillères à soupe d'huile d'olive, 2 cuillères à soupe de vinaigre et de piment (selon les goûts).",
+        "Laisser reposer au frais au minimum 2 heures.",
+        "Détailler en petits dés poivrons et concombre restants. Ecraser les oeufs durs à la fourchette. Parsemer la soupe de basilic ciselé.",
+        "Disposer les garnitures dans des ramequins et chacun accommodera son gaspacho selon ses goûts."
+      ],
+      "tags":["veggie","sugar-free"]
+    },
+    {
+      "id": 3,
+      "nom": "Lassi",
+      "image": "https://i0.wp.com/www.cookme-shop.com/blog/wp-content/uploads/2018/01/lassi.jpg?fit=1200%2C630&ssl=1",
+      "temps": 65,
+      "nombre": 4,
+      "ingredients": [
+        { "name": "yaourt", "quantity": 0.25 },
+        { "name": "sucre", "quantity": 0.025 },
+        { "name": "eau de rose", "quantity": 0.005 },
+        { "name": "muscade", "quantity": 0.1 }
+      ],
+      "description": "Cette boisson vous rafraîchira autant qu'elle vous mettra du baume au coeur.",
+      "etapes": [
+        "Mélangez au mixeur ou au fouet de l'eau très froide (1dL), yaourts, muscade et sucre jusqu'à ce que la boisson soit bien homogène.",
+        "Aromatisez d'eau de rose. Ajoutez le poivre de Cayenne.",
+        "Mettez au réfrigérateur pendant 2 ou 3 heures avant de servir."
+      ],
+      "tags":["veggie","gluten-free"]
+
+    },
+    {
+      "id": 4,
+      "nom": "Pommes au four",
+      "image": "https://img.cuisineaz.com/660x660/2016-10-31/i94158-pommes-au-four-a-la-cannelle-au-miel-et-jus-de-citron.jpg",
+      "temps": 20,
+      "nombre": 4,
+      "ingredients": [
+        { "name": "pomme", "quantity": 4 },
+        { "name": "sucre", "quantity": 0.2 }
+      ],
+      "description": "Un dessert qui ravira les grands comme les petits",
+      "etapes": [
+        "Épluchez les pommes et enlevez le coeur sans les couper.",
+        "Mettez les pommes dans un plat à four, sur un fond d'eau. Ajoutez le sucre au milieu des pommes.",
+        "Enfournez 15 min à 180°C, pour que les pommes soient dorées et le sucre caramélisé."
+      ],
+      "tags":["veggie","gluten-free","vegan"]
+
+    },
+    {
+      "id": 5,
+      "nom": "Croque monsieur",
+      "image": "https://fac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Ffac.2F2020.2F03.2F16.2F133e9ae1-4e30-48e9-9228-74b38bc85dcf.2Ejpeg/850x478/quality/90/crop-from/center/focus-point/418%2C348/croques-monsieur-au-four.jpeg",
+      "temps": 15,
+      "nombre": 5,
+      "ingredients": [
+        { "name": "tranche de pain de mie", "quantity": 2 },
+        { "name": "beurre", "quantity": 0.005 },
+        { "name": "tranche de jambon", "quantity": 4 },
+        { "name": "gruyère", "quantity": 0.01 }
+      ],
+      "description": "Un plat rapide qui saura réunir tout le monde.",
+      "etapes": [
+        "Beurrez les tranches de pain.",
+        "Superposez une tranche de pain, une tranche de jambon, du fromage, une tranche de pain, du fromage et du beurre.",
+        "Enfournez 10 min à 180°C."
+      ],
+      "tags":["sugar-free","gluten-free"]
+
     }
   ],
   "ingredients": [
-    { "id":0, "name": "oeuf", "prix": 3, "quantité": 6, "unite": "u" },
-    { "id":1, "name": "sucre", "prix": 2, "quantité": 1, "unité": "kg" },
-    { "id":2, "name": "beurre", "prix": 4, "quantité": 0.5, "unité": "kg" },
-    { "id":3, "name": "farine", "prix": 3, "quantité": 1, "unité": "kg" },
-    { "id":4, "name": "lait", "prix": 2, "quantité": 1, "unité": "L" }
-=======
-  "recettes": [{
-    "nom" : "Crêpes",
-    "ingrédients": [
-      { "oeufs": 2 },
-      { "sucre": 3 },
-      { "beurre": 0.05 },
-      { "farine": 0.3 },
-      { "lait": 60 }
-    ],
-    "etapes": [
-      "Mettre la farine dans une terrine et former un puits.",
-      "Y déposer les oeufs entiers, le sucre, l'huile et le beurre.",
-      "Mélanger délicatement avec un fouet en ajoutant au fur et à mesure le lait. La pâte ainsi obtenue doit avoir une consistance d'un liquide légèrement épais.",
-      "Parfumer de rhum.",
-      "Faire chauffer une poêle antiadhésive et la huiler très légèrement. Y verser une louche de pâte, la répartir dans la poêle puis attendre qu'elle soit cuite d'un côté avant de la retourner. Cuire ainsi toutes les crêpes à feu doux."
-    ]
-  }],
-  "ingredients": [
-    { "nom": "oeuf", "prix": 3, "quantité": 6, "unite": "u" },
-    { "nom": "sucre", "prix": 2, "quantité": 1, "unité": "kg" },
-    { "nom": "beurre", "prix": 4, "quantité": 0.5, "unité": "kg" },
-    { "nom": "farine", "prix": 3, "quantité": 1, "unité": "kg" },
-    { "nom": "lait", "prix": 2, "quantité": 1, "unité": "L" }
->>>>>>> 9821815b8f25d8d29fe2e89d5f3a5463205af42e
+    { "id": 0, "name": "oeuf", "prix": 3, "quantité": 6, "unite": "u" },
+    { "id": 1, "name": "sucre", "prix": 2, "quantité": 1, "unité": "kg" },
+    { "id": 2, "name": "beurre", "prix": 4, "quantité": 0.5, "unité": "kg" },
+    { "id": 3, "name": "farine", "prix": 3, "quantité": 1, "unité": "kg" },
+    { "id": 4, "name": "lait", "prix": 2, "quantité": 1, "unité": "L" },
+    { "id": 5, "name": "riz", "prix": 3, "quantité": 1, "unité": "kg" },
+    { "id": 6, "name": "calamar", "prix": 5, "quantité": 0.1, "unité": "kg" },
+    { "id": 7, "name": "moules", "prix": 5, "quantité": 0.1, "unité": "kg" },
+    { "id": 8, "name": "crevettes", "prix": 4, "quantité": 0.1, "unité": "kg" },
+    { "id": 9, "name": "tomates", "prix": 1, "quantité": 0.25, "unité": "kg" },
+    { "id": 10, "name": "oignon", "prix": 0.5, "quantité": 1, "unité": "u" },
+    {
+      "id": 11,
+      "name": "gousses d'ail",
+      "prix": 0.5,
+      "quantité": 9,
+      "unité": "u"
+    },
+    { "id": 12, "name": "huile", "prix": 5, "quantité": 1, "unité": "L" },
+    {
+      "id": 13,
+      "name": "bouillon",
+      "prix": 0.2,
+      "quantité": 0.25,
+      "unité": "L"
+    },
+    { "id": 14, "name": "poivron", "prix": 0.2, "quantité": 1, "unité": "u" },
+    {
+      "id": 15,
+      "name": "concombre",
+      "prix": 0.75,
+      "quantité": 1,
+      "unité": "u"
+    },
+    { "id": 14, "name": "vinaigre", "prix": 3, "quantité": 1, "unité": "L" },
+    { "id": 17, "name": "basilic", "prix": 2, "quantité": 1, "unité": "u" },
+    { "id": 18, "name": "yaourt", "prix": 2, "quantité": 4, "unité": "u" },
+    {
+      "id": 19,
+      "name": "eau de rose",
+      "prix": 3,
+      "quantité": 0.5,
+      "unité": "L"
+    },
+    {
+      "id": 20,
+      "name": "muscade",
+      "prix": 0.5,
+      "quantité": 0.05,
+      "unité": "kg"
+    },
+    { "id": 21, "name": "pomme", "prix": 0.2, "quantité": 1, "unité": "u" },
+    {
+      "id": 22,
+      "name": "tranche de pain de mie",
+      "prix": 2,
+      "quantité": 10,
+      "unité": "u"
+    },
+    {
+      "id": 23,
+      "name": "tranche de jambon",
+      "prix": 3,
+      "quantité": 4,
+      "unité": "u"
+    },
+    { "id": 24, "name": "gruyère", "prix": 2, "quantité": 0.1, "unité": "kg" }
+  ],
+  "users": [
+    {
+      "id": 0,
+      "name": "test",
+      "email": "test",
+      "password": "test",
+      "favorites": [0],
+      "budget": 70,
+      "planning": [0, 0, 0, 0, 0],
+      "list": [
+        {
+          "ingredient": "oeuf",
+          "quantity": 2
+        },
+        {
+          "ingredient": "sucre",
+          "quantity": 2
+        },
+        {
+          "ingredient": "farine",
+          "quantity": 3
+        },
+        {
+          "ingredient": "lait",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "email": "123@gmail.com",
+      "password": "123",
+      "id": "3",
+      "name": "lea"
+    },
+    {
+      "id": "aM0FxpX",
+      "name": "lea",
+      "email": "lea",
+      "password": "lea",
+      "favorites": [0],
+      "budget": 70,
+      "planning": [0, 0, 0, 0, 0],
+      "list": [
+        {
+          "ingredient": "oeuf",
+          "quantity": 2
+        },
+        {
+          "ingredient": "sucre",
+          "quantity": 2
+        },
+        {
+          "ingredient": "farine",
+          "quantity": 3
+        },
+        {
+          "ingredient": "lait",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "name": "lea",
+      "favorites": [],
+      "budget": 0,
+      "planning": [],
+      "list": [],
+      "id": "kUf8cFE"
+    },
+    {
+      "name": "lea",
+      "favorites": [],
+      "budget": 0,
+      "planning": [],
+      "list": [],
+      "id": "Yax464s"
+    },
+    {
+      "email": "lea",
+      "password": "lea",
+      "name": "lea",
+      "favorites": [],
+      "budget": 0,
+      "planning": [],
+      "list": [],
+      "id": "CfU1mkR"
+    }
   ]
 }
