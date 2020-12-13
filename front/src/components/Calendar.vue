@@ -4,9 +4,12 @@
       <h1>Calendrier</h1>
     </div>
     <div class="container" >
-        <div v-for="(recipe,index) in recipes" :key="index">
-        <Day :id="recipe.id" :name="recipe.nom" :image="recipe.image" />
+        <div class="row d-flex">
+<div v-for="(recipe,index) in recipes" :key="index">
+        <Day :id="recipe.id" :name="recipe.nom" :image="recipe.image" :day="days[index]"/>
         </div>
+        </div>
+        
     </div>
   </div>
 </template>
@@ -21,7 +24,8 @@ export default {
   data() {
     return {
       planning: null,
-      recipes: null
+      recipes: null,
+      days: ["Lundi","Mardi","Mercredi","Jeudi","Vendredi"]
     };
   },
   async mounted() {
