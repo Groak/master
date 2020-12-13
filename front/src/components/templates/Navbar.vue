@@ -23,9 +23,9 @@
               >
                 <option
                   class="d-inline-block"
-                  v-for="facility in selectedFacilities"
-                  v-bind:value="facility.value"
-                  :key="facility.value + 2"
+                  v-for="(facility,index) in selectedFacilities"
+                  v-bind:value="facility"
+                  :key="index + 2"
                   @click.prevent="removeFacilities"
                   >{{ facility.text }}</option
                 >
@@ -41,18 +41,21 @@
                 class="available_options"
               >
                 <option
-                  v-for="facility in availableFacilities"
-                  v-bind:value="facility.value"
-                  :key="facility.value + 1"
+                  v-for="(tag,index) in tags"
+                  v-bind:value="index"
+                  :key="index+ 1"
                   @click.prevent="addFacilities"
-                  >{{ facility.text }}</option
+                  >{{ tag }}</option
                 >
               </select>
             </div>
             <div class="search">
               <button>
                 <router-link
-                  :to="{ name: 'recipesearch', params: { criteria: selectedFacilities[0] } }"
+                  :to="{
+                    name: 'recipesearch',
+                    params: { criteria: selectedFacilities[0] },
+                  }"
                 >
                   Search</router-link
                 >
@@ -79,6 +82,7 @@ export default {
   data() {
     return {
       clicked: false,
+      tags: [],
       availableFacilities: [
         {
           value: 1,
@@ -102,7 +106,23 @@ export default {
       selectedFacilitiesSelectedValues: [],
     };
   },
+  mounted() {
+    this.$http.get("http://localhost:3000/recettes").then((response) =>
+      response.data.forEach((e) => {
+        e.tags.forEach((e) => {
+          this.tags.push(e);
+          this.tags = this.uniqueArray(this.tags);
+        });
+      })
+    );
+  },
   methods: {
+    uniqueArray: function(arr) {
+      var a = [];
+      for (var i = 0, l = arr.length; i < l; i++)
+        if (a.indexOf(arr[i]) === -1 && arr[i] !== "") a.push(arr[i]);
+      return a;
+    },
     sendMessage: function(event) {
       if (event.key === "Enter") {
         console.log("New line added, message not sended");
@@ -111,20 +131,22 @@ export default {
     },
     move(value, arrFrom, arrTo) {
       var index = arrFrom.findIndex(function(el) {
-        return el.value == value;
+        return el == arrFrom[value];
       });
+      console.log(index)
       var item = arrFrom[index];
 
       arrFrom.splice(index, 1);
       arrTo.push(item);
     },
+
     addFacilities() {
       var selected = this.availableFacilitiesSelectedValues.slice(0);
 
       for (var i = 0; i < selected.length; ++i) {
         this.move(
           selected[i],
-          this.availableFacilities,
+          this.tags,
           this.selectedFacilities
         );
       }
@@ -136,7 +158,7 @@ export default {
         this.move(
           selected[i],
           this.selectedFacilities,
-          this.availableFacilities
+          this.tags
         );
       }
     },

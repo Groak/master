@@ -17,7 +17,13 @@
               />
             </div>
             <div class="text-right">
-              <img @click="login()" src="../assets/arrow.png" alt="" />
+              <router-link to="/favorites" v-if="logged"
+                >
+                <img src="../assets/arrow.png" alt="" />
+
+                </router-link>
+              <img v-else @click="login()" src="../assets/arrow.png" alt="" />
+              
             </div>
             <p>
               You want to
@@ -41,24 +47,38 @@ export default {
       email: "",
       password: "",
       id: "",
+      logged:false
     };
   },
   methods: {
     async login() {
-      try {
-          var email = this.email
-          var password = this.password
+        try {
         const res = await this.$http.get("http://localhost:3000/users");
-        var user = res.data.filter(function(e) {
-          e.email == email && e.password == password;
+        var user = res.data.find(e => {
+          return e.email == this.email && e.password == this.password
         });
-        if (user == null) {
+        console.log(user)
+        if (!user) {
           console.log('wrong info!')
+          return(false)
         } else {
-          console.log("logged in!");
+          this.logged = true
+          this.session(user)
+          return(true)
         }
       } catch (error) {
         console.log(error);
+      }
+      },
+    async session(user) {
+      try {
+        const res = await this.$http.post("http://localhost:3000/logged", {
+          user
+        });
+        console.log(res.data);
+      } catch (error) {
+        this.logged = true;
+        console.log(error.res.status);
       }
     },
   },

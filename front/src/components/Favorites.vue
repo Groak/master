@@ -4,35 +4,44 @@
       <h1>Favorites</h1>
     </div>
     <div class="container" v-for="recipe in recipes" :key="recipe.id">
-      <p class="recipe-title text-left">
-        {{ recipe.nom }}
-      </p>
-      <div class="row">
-        <div class="col-12 col-md-4 text-left recipe">
-          <img :src="recipe.image" alt="" />
-        </div>
-        <div class="col-12 col-md-8 text-left">
-          <div class="info d-flex">
-            <img src="../assets/dollar.png" alt="" />
-            <p>{{ getprice(recipe) }} €</p>
+      <div v-if="recipes.indexOf(recipe) % 2 == 0">
+        <p class="recipe-title text-left">
+          {{ recipe.nom }}
+        </p>
+        <div class="row">
+          <div class="col-12 col-md-4 text-left recipe">
+            <img :src="recipe.image" alt="" />
           </div>
-          <div class="info d-flex">
-            <img src="../assets/clock.png" alt="" />
-          </div>
-          <div class="description">
-            <h3>Ingrédients</h3>
-            <ul>
-              <li
-                v-for="ingredient in recipe.ingredients.slice(0, 4)"
-                :key="ingredient.id"
+          <div class="col-12 col-md-8 text-left">
+            <div class="description">
+              <p>{{ recipe.description }}</p>
+              <p>...</p>
+              <router-link :to="{ name: 'recipe', params: { id: recipe.id } }"
+                >Lire plus ></router-link
               >
-                {{ ingredient.name }}
-              </li>
-            </ul>
-            <p>...</p>
-            <router-link :to="{ name: 'recipe', params: { id: recipe.id } }"
-              >Lire plus ></router-link
-            >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div v-else>
+        <p class="recipe-title text-right">
+          {{ recipe.nom }}
+        </p>
+        <div class="row">
+          <div class="col-12 col-md-8 text-right">
+            <div class="d-flex w-100 justify-content-end">
+              <div class="description">
+                <p>{{ recipe.description }}</p>
+                <p>...</p>
+                <router-link :to="{ name: 'recipe', params: { id: recipe.id } }"
+                  >Lire plus ></router-link
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 text-right recipe">
+            <img :src="recipe.image" alt="" />
           </div>
         </div>
       </div>
@@ -47,18 +56,17 @@ export default {
   data() {
       return{
   favorites: null,
-    recipes: null
+    recipes: null,
+    loaded: false,
+    ingredients: null,
       }
 
   },
   async mounted() {
     var array = []
-    this.$http
-      .get("http://localhost:3000/users")
-      .then((response) => (this.favorites = response.data[this.$route.params.id].favorites),
-      console.log(this.favorites)
-      );
-      console.log(this.favorites)
+    const res = await this.$http.get("http://localhost:3000/logged");
+    this.favorites = res.data[0].user.favorites
+    console.log(this.favorites)
     this.favorites.forEach(element => {
           this.$http
       .get("http://localhost:3000/recettes/" + element)
@@ -66,8 +74,9 @@ export default {
     });
     console.log(array)
     this.recipes = array;
-
   },
+  
+ 
 
   };
  

@@ -19,6 +19,8 @@ import Recipe from './components/Recipe.vue'
 import Login from './components/Login.vue'
 import Register from './components/Register.vue'
 import Favorites from './components/Favorites.vue'
+import Calendar from './components/Calendar.vue'
+
 const routes = [
   {path:'/', component: Home},
   {path:'/recipes', component: Recipes},
@@ -27,12 +29,47 @@ const routes = [
 
   {path:'/login', component: Login},
   {path:'/register', component: Register},
-  {path: '/favorites/:id', component: Favorites, name : 'favorites'}
+  {path: '/favorites', component: Favorites, name : 'favorites'},
+  {path: '/calendar', component: Calendar, name : 'calendar'}
+
 ]
 const router = new VueRouter({
   routes
 })
+Vue.mixin({
+    data(){
+      return{
+        user:null,
+        test:"test"
+      }
+    },
+    methods: {
+      async loginNewUser(email,password) {
+        try {
+        const res = await this.$http.get("http://localhost:3000/users");
+        console.log(res.data)
+        console.log(email)
+        console.log(password)
+
+        var user = res.data.find(e => {
+          return e.email == email && e.password == password
+        });
+        console.log(user)
+        if (!user) {
+          console.log('wrong info!')
+          return(false)
+        } else {
+          this.user = user
+          return(true)
+        }
+      } catch (error) {
+        console.log(error);
+      }
+      }
+    }
+});
 new Vue({
   router,
   render: h => h(App),
+
 }).$mount('#app')
