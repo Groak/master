@@ -1,0 +1,965 @@
+{
+  "recettes": [
+    {
+      "id": 0,
+      "nom": "Crêpes",
+      "image": "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/39ee5603-5ac4-4420-9563-11ae0ec17b41/Derivates/21ffd62c-8c68-43ac-9593-16c4c09e644d.jpg",
+      "temps": 40,
+      "nombre": 4,
+      "ingredients": [
+        {
+          "name": "oeuf",
+          "quantity": 2
+        },
+        {
+          "name": "sucre",
+          "quantity": 0.1
+        },
+        {
+          "name": "beurre",
+          "quantity": 0.05
+        },
+        {
+          "name": "farine",
+          "quantity": 0.3
+        },
+        {
+          "name": "lait",
+          "quantity": 0.5
+        }
+      ],
+      "description": "Les crêpes comme celles de votre grand mère !",
+      "etapes": [
+        "Mettre la farine dans une terrine et former un puits.",
+        "Y déposer les oeufs entiers, le sucre, l'huile et le beurre.",
+        "Mélanger délicatement avec un fouet en ajoutant au fur et à mesure le lait. La pâte ainsi obtenue doit avoir une consistance d'un liquide légèrement épais.",
+        "Parfumer de rhum.",
+        "Faire chauffer une poêle antiadhésive et la huiler très légèrement. Y verser une louche de pâte, la répartir dans la poêle puis attendre qu'elle soit cuite d'un côté avant de la retourner. Cuire ainsi toutes les crêpes à feu doux."
+      ],
+      "tags": [
+        "vegetarian",
+        "no-oven"
+      ]
+    },
+    {
+      "id": 1,
+      "nom": "Paëlla",
+      "image": "https://lacerisesurlemaillot.fr/wp-content/uploads/2017/10/RisottoPaella1-2.jpg",
+      "temps": 45,
+      "nombre": 4,
+      "ingredients": [
+        {
+          "name": "riz",
+          "quantity": 0.5
+        },
+        {
+          "name": "calamar",
+          "quantity": 0.5
+        },
+        {
+          "name": "moules",
+          "quantity": 0.1
+        },
+        {
+          "name": "crevettes",
+          "quantity": 0.1
+        },
+        {
+          "name": "tomates",
+          "quantity": 0.4
+        },
+        {
+          "name": "oignon",
+          "quantity": 2
+        },
+        {
+          "name": "gousses d'ail",
+          "quantity": 0.3
+        },
+        {
+          "name": "huile",
+          "quantity": 0.001
+        },
+        {
+          "name": "bouillon",
+          "quantity": 4
+        }
+      ],
+      "description": "Succombez à une délicieuse paëlla aux saveurs de la mer.",
+      "etapes": [
+        "Nettoyer les moules, peler et concasser les tomates, hacher les oignons et l'ail.",
+        "Mettre l'huile dans le plat ajouter les calamars, les oignons tout en remuant puis mettre les tomates, l'ail, du sel et du poivre. Laisser cuire 5 minutes en remuant avant d'incorporer le riz et le bouillon.",
+        "Y plonger les crevettes et les moules, porter à ébullition puis laisser cuire environ 30-35 minutes. C'est prêt !"
+      ],
+      "tags": [
+        "vegetarian",
+        "sugar-free",
+        "no-oven",
+        "gluten-free"
+      ]
+    },
+    {
+      "id": 2,
+      "nom": "Gaspacho",
+      "image": "https://www.adeline-cuisine.fr/wp-content/uploads/2018/06/Gaspacho-recette-facile.jpg",
+      "temps": 15,
+      "nombre": 6,
+      "ingredients": [
+        {
+          "name": "tomates",
+          "quantity": 0.9
+        },
+        {
+          "name": "poivron",
+          "quantity": 3
+        },
+        {
+          "name": "oignon",
+          "quantity": 1
+        },
+        {
+          "name": "concombre",
+          "quantity": 1.5
+        },
+        {
+          "name": "gousses d'ail",
+          "quantity": 0.2
+        },
+        {
+          "name": "vinaigre",
+          "quantity": 0.001
+        },
+        {
+          "name": "oeuf",
+          "quantity": 0.3
+        },
+        {
+          "name": "basilic",
+          "quantity": 1
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 0.005
+        }
+      ],
+      "description": "Un gaspacho qui vous transportera dans un voyage de sensations.",
+      "etapes": [
+        "Couper les tomates, 2 poivrons, 1 concombre, l'oignon et l'ail, passer le tout au mixer.",
+        "Assaisonner avec sel,poivre, 4 cuillères à soupe d'huile d'olive, 2 cuillères à soupe de vinaigre et de piment (selon les goûts).",
+        "Laisser reposer au frais au minimum 2 heures.",
+        "Détailler en petits dés poivrons et concombre restants. Ecraser les oeufs durs à la fourchette. Parsemer la soupe de basilic ciselé.",
+        "Disposer les garnitures dans des ramequins et chacun accommodera son gaspacho selon ses goûts."
+      ],
+      "tags": [
+        "vegetarian",
+        "sugar-free",
+        "no-oven",
+        "gluten-free"
+      ]
+    },
+    {
+      "id": 3,
+      "nom": "Lassi",
+      "image": "https://i0.wp.com/www.cookme-shop.com/blog/wp-content/uploads/2018/01/lassi.jpg?fit=1200%2C630&ssl=1",
+      "temps": 65,
+      "nombre": 4,
+      "ingredients": [
+        {
+          "name": "yaourt",
+          "quantity": 0.25
+        },
+        {
+          "name": "sucre",
+          "quantity": 0.025
+        },
+        {
+          "name": "eau de rose",
+          "quantity": 0.005
+        },
+        {
+          "name": "muscade",
+          "quantity": 0.1
+        }
+      ],
+      "description": "Cette boisson vous rafraîchira autant qu'elle vous mettra du baume au coeur.",
+      "etapes": [
+        "Mélangez au mixeur ou au fouet de l'eau très froide (1dL), yaourts, muscade et sucre jusqu'à ce que la boisson soit bien homogène.",
+        "Aromatisez d'eau de rose. Ajoutez le poivre de Cayenne.",
+        "Mettez au réfrigérateur pendant 2 ou 3 heures avant de servir."
+      ],
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "no-oven"
+      ]
+    },
+    {
+      "id": 4,
+      "nom": "Pommes au four",
+      "image": "https://img.cuisineaz.com/660x660/2016-10-31/i94158-pommes-au-four-a-la-cannelle-au-miel-et-jus-de-citron.jpg",
+      "temps": 20,
+      "nombre": 4,
+      "ingredients": [
+        {
+          "name": "pomme",
+          "quantity": 4
+        },
+        {
+          "name": "sucre",
+          "quantity": 0.2
+        }
+      ],
+      "description": "Un dessert qui ravira les grands comme les petits",
+      "etapes": [
+        "Épluchez les pommes et enlevez le coeur sans les couper.",
+        "Mettez les pommes dans un plat à four, sur un fond d'eau. Ajoutez le sucre au milieu des pommes.",
+        "Enfournez 15 min à 180°C, pour que les pommes soient dorées et le sucre caramélisé."
+      ],
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "vegan"
+      ]
+    },
+    {
+      "id": 5,
+      "nom": "Croque monsieur",
+      "image": "https://fac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Ffac.2F2020.2F03.2F16.2F133e9ae1-4e30-48e9-9228-74b38bc85dcf.2Ejpeg/850x478/quality/90/crop-from/center/focus-point/418%2C348/croques-monsieur-au-four.jpeg",
+      "temps": 15,
+      "nombre": 5,
+      "ingredients": [
+        {
+          "name": "tranche de pain de mie",
+          "quantity": 2
+        },
+        {
+          "name": "beurre",
+          "quantity": 0.005
+        },
+        {
+          "name": "tranche de jambon blanc",
+          "quantity": 4
+        },
+        {
+          "name": "gruyère",
+          "quantity": 0.01
+        }
+      ],
+      "description": "Un plat rapide qui saura réunir tout le monde.",
+      "etapes": [
+        "Beurrez les tranches de pain.",
+        "Superposez une tranche de pain, une tranche de jambon, du fromage, une tranche de pain, du fromage et du beurre.",
+        "Enfournez 10 min à 180°C."
+      ],
+      "tags": [
+        "sugar-free"
+      ]
+    },
+    {
+      "id": 6,
+      "nom": "Pain de mie perdu",
+      "image": "https://i.pinimg.com/originals/89/4e/17/894e17e52e1888ac3d8d724311b6001f.jpg",
+      "temps": 10,
+      "nombre": 1,
+      "ingredients": [
+        {
+          "name": "tranche de pain de mie",
+          "quantity": 2
+        },
+        {
+          "name": "tranche de jambon fumé",
+          "quantity": 2
+        },
+        {
+          "name": "camembert",
+          "quantity": 1
+        },
+        {
+          "name": "pomme",
+          "quantity": 1
+        },
+        {
+          "name": "oeuf",
+          "quantity": 1
+        },
+        {
+          "name": "lait",
+          "quantity": 0.12
+        },
+        {
+          "name": "beurre",
+          "quantity": 0.007
+        }
+      ],
+      "description": "Un plat rapide qui variera vos habitudes !",
+      "etapes": [
+        "Beurrez les tranches de pain sur une seule face.",
+        "Coupez des tranches de camembert et déposez-les sur la face non beurrée.",
+        "Epluchez la pomme et coupez la en fines rondelles. Déposez quelques rondelles sur le camembert puis ajoutez le jambon fumé",
+        "Couvrez avec l'autre tranche de pain de mie avec le beurre à l'extérieur",
+        "Dans une assiette creuse, cassez l'oeuf et ajoutez-y le lait. Battez le tout avec une fourchette.",
+        "Faites chauffer le reste du beurre dans une poêle. Trempez bien les deux côtés du pain dans le mélange oeuf-lait et faites les dorer dans la poêle en les retournant.",
+        "Votre repas est prêt lorsque le camembert est coulant !"
+      ],
+      "tags": [
+        "sugar-free",
+        "no-oven"
+      ]
+    },
+    {
+      "id": 7,
+      "nom": "Pizza Express",
+      "image": "https://tipbuzz.com/wp-content/uploads/Greek-Pita-Pizza.jpg",
+      "temps": 20,
+      "nombre": 1,
+      "ingredients": [
+        {
+          "name": "pain pita",
+          "quantity": 1
+        },
+        {
+          "name": "coulis de tomate",
+          "quantity": 0.06
+        },
+        {
+          "name": "mozzarella",
+          "quantity": 1
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 0.005
+        },
+        {
+          "name": "origan",
+          "quantity": 0.005
+        }
+      ],
+      "description": "Une pizza comme vous en avez jamais mangé !",
+      "etapes": [
+        "Préchauffez le four à 200°C (th. 6-7).",
+        "Passez le pain pita 3-4 min au grille pain. ",
+        "Ouvrez le en deux dans l'épaisseur et tartinez les deux moitiés de coulis de tomate.",
+        "Coupez la boule de mozzarella en tranches et déposez celles-ci sur le coulis.",
+        "Ajoutez un filet d'huile d'olive et parsemez d'une pincée d'origan. ",
+        "Faites cuire au four pendant 15 min. "
+      ],
+      "tags": [
+        "sugar-free",
+        "vegetarian"
+      ]
+    },
+    {
+      "id": 8,
+      "nom": "Riz Cantonnais",
+      "image": "http://www.monquotidienautrement.com/sites/default/files/riz_cantonais.jpg",
+      "temps": 15,
+      "nombre": 1,
+      "ingredients": [
+        {
+          "name": "riz",
+          "quantity": 0.075
+        },
+        {
+          "name": "tranche de jambon blanc",
+          "quantity": 1
+        },
+        {
+          "name": "petit pois",
+          "quantity": 0.03
+        },
+        {
+          "name": "oeuf",
+          "quantity": 1
+        },
+        {
+          "name": "bouillon",
+          "quantity": 1
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 0.01
+        }
+      ],
+      "description": "Une nouvelle façon de manger votre riz. ",
+      "etapes": [
+        "Portez à ébullion une casserole d'eau avec la tablette de bouillon de poule. Y ajouter le riz et le laisser cuire selon les indications présentes sur le sachet.",
+        "Cassez un oeuf dans un bol et battez-le à la fourchette. ",
+        "Faites cuire l'oeuf avec une poêle avec un filet d'huile d'olive.",
+        "Coupez l'omelette en petits morceaux. Coupez également le jambon en petits morceaux et egouttez les petits pois. '",
+        "Egouttez le riz et mettez le dans une poêle avec un filet d'huile d'olive. Y ajouter les morceaux d'omelette, de jambon et les petits pois. ",
+        "Faites revenir le tout pendant 2 min puis servez bien chaud. "
+      ],
+      "tags": [
+        "sugar-free",
+        "gluten-free",
+        "no-oven"
+      ]
+    },
+    {
+      "id": 9,
+      "nom": "Wrap au guacamole",
+      "image": "http://www.lesfoodies.com/_recipeimage/recipe/271828/w/430",
+      "temps": 10,
+      "nombre": 1,
+      "ingredients": [
+        {
+          "name": "tortilla souple",
+          "quantity": 1
+        },
+        {
+          "name": "tranche de jambon blanc",
+          "quantity": 1
+        },
+        {
+          "name": "petits-suisses",
+          "quantity": 2
+        },
+        {
+          "name": "avocat",
+          "quantity": 1
+        },
+        {
+          "name": "citron",
+          "quantity": 1
+        },
+        {
+          "name": "roquette",
+          "quantity": 1
+        },
+        {
+          "name": "piment",
+          "quantity": 0.002
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 0.005
+        }
+      ],
+      "description": "Un guacamole qui fera des jaloux ! ",
+      "etapes": [
+        "Fendez l'avocat en deux, retirez en le noyau et videz le dans un bol. Ecrasez le à la fourchette. ",
+        "Ajoutez-y le jus de citron et la pincée de piment. Mélangez jusqu'à obtention d'une pâte homogène. ",
+        "Etalez le guacamole sur la tortilla. Ajoutez-y la tranche de jambon. ",
+        "Mettez les petits-suisses dans un bol et mélangez les pour les assouplir.",
+        "Etalez les ensuite sur le jambon. Rajoutez la roquette et le filet d'huile d'olive. ",
+        "Roulez votre wrap et dégustez !"
+      ],
+      "tags": [
+        "sugar-free",
+        "no-oven"
+      ]
+    },
+    {
+      "id": 10,
+      "nom": "Gratin de pâtes à la feta et pousses d'épinard",
+      "image": "http://images2.confidentielles.fr/dl/images/images_fiches/2011/11/01/10/172104-1320141168.jpg",
+      "temps": 30,
+      "nombre": 4,
+      "ingredients": [
+        {
+          "name": "pâtes",
+          "quantity": 0.4
+        },
+        {
+          "name": "épinards",
+          "quantity": 0.3
+        },
+        {
+          "name": "pignons de pin",
+          "quantity": 0.05
+        },
+        {
+          "name": "feta",
+          "quantity": 0.4
+        },
+        {
+          "name": "lait",
+          "quantity": 0.35
+        },
+        {
+          "name": "beurre",
+          "quantity": 0.04
+        },
+        {
+          "name": "farine",
+          "quantity": 0.02
+        }
+      ],
+      "description": "Une nouvelle astuce pour faire manger des épinards aux plus petits ! ",
+      "etapes": [
+        "Décongelez les épinards dnas de l'eau chaude puis égouttez les. ",
+        "Portez de l'eau à ébullition avec une pincée de sel. Ajoutez-y les pâtes et laissez les cuire comme indiqué sur le sachet. Egouttez-les. ",
+        "Préchauffez le four à 180°C (th. 6). ",
+        "Préparez une béchamel : faites fondre le beurre à feu doux, ajoutez-y la farine puis le lait sans cesser de fouetter. Laissez épaissir pendant quelques minutes. ",
+        "Ecrasez la feta dans un bol puis ajoutez là à la béchamel. Ajoutez les épinards et mélangez soigneusement. ",
+        "Dans une poêle, faites griller les pignons de pin à sec. Versez les pâtes dans le plat à gratin, y ajouter les pignons et la béchamel aux épinards. ",
+        "Mélangez bien le tout puis enfournez une vingtaine de minutes. "
+      ],
+      "tags": [
+        "sugar-free",
+        "vegetarian"
+      ]
+    },
+    {
+      "id": 11,
+      "nom": "Tortilla",
+      "image": "https://www.thecubanhistory.com/wp-content/uploads/2013/06/TORTILLA-DE-PATATAS.jpg",
+      "temps": 30,
+      "nombre": 4,
+      "ingredients": [
+        {
+          "name": "pommes de terre",
+          "quantity": 1.2
+        },
+        {
+          "name": "oignon",
+          "quantity": 4
+        },
+        {
+          "name": "oeuf",
+          "quantity": 5
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 0.02
+        }
+      ],
+      "description": "Premiers pas vers un voyage en Espagne ",
+      "etapes": [
+        "Epluchez les pommes de terre et les oignons. Coupez les en tranches fines. ",
+        "Faites chauffer l'huile dans une poêle et faites y revenir les oignons et les pommes de terre. Laissez cuire environ 20minutes. ",
+        "Cassez les oeufs dans un saladier et battez-les à l'aide d'un fouet. ",
+        "Lorsque les oignons et les pommes de terre sont cuits, les ajouter dans le saladier, salez et poivrez, et mélangez le tout. ",
+        "Versez le tout dans une poêle et laissez cuire. ",
+        "Lorsque l'omelette est cuite, retournez la dans une assiette, et faites là glisser dans la poêle pour cuire les deux côtés sans la casser. "
+      ],
+      "tags": [
+        "sugar-free",
+        "gluten-free",
+        "vegetarian",
+        "no-oven"
+      ]
+    },
+    {
+      "id": 12,
+      "nom": "Hachis Parmentier",
+      "image": "https://www.maison-bertin.fr/photos/p/780-productZoom.jpg",
+      "temps": 30,
+      "nombre": 4,
+      "ingredients": [
+        {
+          "name": "viande hachée",
+          "quantity": 0.5
+        },
+        {
+          "name": "oignon",
+          "quantity": 2
+        },
+        {
+          "name": "gousses d'ail",
+          "quantity": 2
+        },
+        {
+          "name": "pot de sauce tomate",
+          "quantity": 1
+        },
+        {
+          "name": "sachet de purée mousseline au lait",
+          "quantity": 2
+        },
+        {
+          "name": "gruyère",
+          "quantity": 0.12
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 0.005
+        }
+      ],
+      "description": "Un plat qui vous ramènera en enfance ",
+      "etapes": [
+        "Préchauffez le four à 180°C. ",
+        "Epluchez puis hachez les oignons et l'ail. ",
+        "Versez un filet d'huile d'olive puis faites cuire les oignons et l'ail. Y ajouter la viande hachée. ",
+        "Laissez cuire quelques minutes jusqu'à ce que la viande soit brune. Ajoutez alors la sauce tomate, mélangez, puis laissez reposer 5 minutes. ",
+        "Préparez la purée selon les indiquations inscrites au dos. ",
+        "Versez la viande dans le plat à gratin et étalez-là. Ajoutez la purée puis parsemez de gruyère râpé. ",
+        "Laissez cuire au four 15minutes. "
+      ],
+      "tags": [
+        "sugar-free"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "id": 0,
+      "name": "oeuf",
+      "prix": 2.65,
+      "quantité": 6,
+      "unite": "u"
+    },
+    {
+      "id": 1,
+      "name": "sucre",
+      "prix": 0.74,
+      "quantité": 1,
+      "unité": "kg"
+    },
+    {
+      "id": 2,
+      "name": "beurre",
+      "prix": 2.38,
+      "quantité": 0.25,
+      "unité": "kg"
+    },
+    {
+      "id": 3,
+      "name": "farine",
+      "prix": 0.44,
+      "quantité": 1,
+      "unité": "kg"
+    },
+    {
+      "id": 4,
+      "name": "lait",
+      "prix": 0.77,
+      "quantité": 1,
+      "unité": "L"
+    },
+    {
+      "id": 5,
+      "name": "riz",
+      "prix": 1.31,
+      "quantité": 0.5,
+      "unité": "kg"
+    },
+    {
+      "id": 6,
+      "name": "calamar",
+      "prix": 3.95,
+      "quantité": 0.5,
+      "unité": "kg"
+    },
+    {
+      "id": 7,
+      "name": "moules",
+      "prix": 3.45,
+      "quantité": 0.4,
+      "unité": "kg"
+    },
+    {
+      "id": 8,
+      "name": "crevettes",
+      "prix": 4.9,
+      "quantité": 0.35,
+      "unité": "kg"
+    },
+    {
+      "id": 9,
+      "name": "tomates",
+      "prix": 2.39,
+      "quantité": 1,
+      "unité": "kg"
+    },
+    {
+      "id": 10,
+      "name": "oignon",
+      "prix": 0.2,
+      "quantité": 1,
+      "unité": "u"
+    },
+    {
+      "id": 11,
+      "name": "gousses d'ail",
+      "prix": 1.43,
+      "quantité": 9,
+      "unité": "u"
+    },
+    {
+      "id": 12,
+      "name": "huile d'olive",
+      "prix": 5.79,
+      "quantité": 1,
+      "unité": "L"
+    },
+    {
+      "id": 13,
+      "name": "bouillon",
+      "prix": 8.67,
+      "quantité": 32,
+      "unité": "u"
+    },
+    {
+      "id": 14,
+      "name": "poivron",
+      "prix": 0.29,
+      "quantité": 1,
+      "unité": "u"
+    },
+    {
+      "id": 15,
+      "name": "concombre",
+      "prix": 0.95,
+      "quantité": 1,
+      "unité": "u"
+    },
+    {
+      "id": 14,
+      "name": "vinaigre",
+      "prix": 3.7,
+      "quantité": 1,
+      "unité": "L"
+    },
+    {
+      "id": 17,
+      "name": "basilic",
+      "prix": 0.99,
+      "quantité": 1,
+      "unité": "u"
+    },
+    {
+      "id": 18,
+      "name": "yaourt",
+      "prix": 1.74,
+      "quantité": 4,
+      "unité": "u"
+    },
+    {
+      "id": 19,
+      "name": "eau de rose",
+      "prix": 3,
+      "quantité": 0.5,
+      "unité": "L"
+    },
+    {
+      "id": 20,
+      "name": "muscade",
+      "prix": 1.49,
+      "quantité": 0.032,
+      "unité": "kg"
+    },
+    {
+      "id": 21,
+      "name": "pomme",
+      "prix": 0.21,
+      "quantité": 1,
+      "unité": "u"
+    },
+    {
+      "id": 22,
+      "name": "tranche de pain de mie",
+      "prix": 1.44,
+      "quantité": 20,
+      "unité": "u"
+    },
+    {
+      "id": 23,
+      "name": "tranche de jambon blanc",
+      "prix": 2.46,
+      "quantité": 4,
+      "unité": "u"
+    },
+    {
+      "id": 24,
+      "name": "gruyère",
+      "prix": 1.25,
+      "quantité": 0.2,
+      "unité": "kg"
+    },
+    {
+      "id": 25,
+      "name": "tranche de jambon fumé",
+      "prix": 2.3,
+      "quantité": 6,
+      "unité": "u"
+    },
+    {
+      "id": 26,
+      "name": "camembert",
+      "prix": 1.22,
+      "quantité": 0.25,
+      "unité": "kg"
+    },
+    {
+      "id": 27,
+      "name": "pain pita",
+      "prix": 1.48,
+      "quantité": 6,
+      "unité": "u"
+    },
+    {
+      "id": 28,
+      "name": "coulis de tomate",
+      "prix": 1.45,
+      "quantité": 0.35,
+      "unité": "kg"
+    },
+    {
+      "id": 29,
+      "name": "mozzarella",
+      "prix": 0.91,
+      "quantité": 1,
+      "unité": "u"
+    },
+    {
+      "id": 30,
+      "name": "origan",
+      "prix": 1.44,
+      "quantité": 0.01,
+      "unité": "kg"
+    },
+    {
+      "id": 31,
+      "name": "petit pois",
+      "prix": 0.64,
+      "quantité": 0.28,
+      "unité": "kg"
+    },
+    {
+      "id": 32,
+      "name": "tortilla souple",
+      "prix": 1.78,
+      "quantité": 8,
+      "unité": "u"
+    },
+    {
+      "id": 33,
+      "name": "petits-suisses",
+      "prix": 1.86,
+      "quantité": 12,
+      "unité": "u"
+    },
+    {
+      "id": 34,
+      "name": "avocat",
+      "prix": 0.7,
+      "quantité": 1,
+      "unité": "u"
+    },
+    {
+      "id": 35,
+      "name": "citron",
+      "prix": 0.7,
+      "quantité": 1,
+      "unité": "u"
+    },
+    {
+      "id": 36,
+      "name": "roquette",
+      "prix": 1.6,
+      "quantité": 1,
+      "unité": "u"
+    },
+    {
+      "id": 37,
+      "name": "piment",
+      "prix": 1.96,
+      "quantité": 0.038,
+      "unité": "kg"
+    },
+    {
+      "id": 38,
+      "name": "pâtes",
+      "prix": 0.87,
+      "quantité": 1,
+      "unité": "kg"
+    },
+    {
+      "id": 39,
+      "name": "épinards",
+      "prix": 2.59,
+      "quantité": 0.4,
+      "unité": "kg"
+    },
+    {
+      "id": 40,
+      "name": "pignons de pin",
+      "prix": 5.65,
+      "quantité": 0.125,
+      "unité": "kg"
+    },
+    {
+      "id": 41,
+      "name": "feta",
+      "prix": 2.01,
+      "quantité": 0.2,
+      "unité": "kg"
+    },
+    {
+      "id": 42,
+      "name": "pommes de terre",
+      "prix": 0.99,
+      "quantité": 1.5,
+      "unité": "kg"
+    },
+    {
+      "id": 43,
+      "name": "viande hâchée",
+      "prix": 3.66,
+      "quantité": 0.4,
+      "unité": "kg"
+    },
+    {
+      "id": 44,
+      "name": "pot de sauce tomate",
+      "prix": 0.99,
+      "quantité": 1,
+      "unité": "u"
+    },
+    {
+      "id": 45,
+      "name": "sachet de purée mousseline au lait",
+      "prix": 1.98,
+      "quantité": 4,
+      "unité": "u"
+    }
+  ],
+  "users": [
+    {
+      "email": "lealea",
+      "password": "1234",
+      "name": "léa",
+      "favorites": [],
+      "budget": 0,
+      "planning": [],
+      "list": [],
+      "id": 1
+    },
+    {
+      "email": "lealea",
+      "password": "1234",
+      "name": "léa",
+      "favorites": [],
+      "budget": 0,
+      "planning": [],
+      "list": [],
+      "id": 2
+    },
+    {
+      "email": "lea",
+      "password": "lea",
+      "name": "lea",
+      "favorites": [],
+      "budget": 0,
+      "planning": [],
+      "list": [],
+      "id": 3
+    }
+  ],
+  "logged": [
+    {
+      "user": {
+        "email": "lea",
+        "password": "lea",
+        "name": "lea",
+        "favorites": [0,2,3],
+        "budget": 0,
+        "planning": [0,1,2,3,4],
+        "list": [],
+        "id": 3
+      },
+      "id": 1
+    }
+  ]
+}
