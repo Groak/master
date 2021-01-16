@@ -14,23 +14,31 @@ Vue.use(VuePageTitle, {
 })
 Vue.config.productionTip = false
 import Home from './components/Home.vue'
+import List from './components/List.vue'
 import Recipes from './components/Recipes.vue'
 import Recipe from './components/Recipe.vue'
 import Login from './components/Login.vue'
 import Register from './components/Register.vue'
 import Favorites from './components/Favorites.vue'
 import Calendar from './components/Calendar.vue'
+import Admin from './components/Admin.vue'
+
 
 const routes = [
   {path:'/', component: Home},
+  {path:'/admin', component: Admin},
+
   {path:'/recipes', component: Recipes},
+  {path:'/recipes/search/', component: Recipes},
+
   {path:'/recipes/search/:criteria', component: Recipes, name: 'recipesearch'},
   {path:'/recipe/:id', component: Recipe, name: 'recipe'},
-
+  {path:'/list/:ref', component: List, name: 'list'},
   {path:'/login', component: Login},
   {path:'/register', component: Register},
   {path: '/favorites', component: Favorites, name : 'favorites'},
   {path: '/calendar', component: Calendar, name : 'calendar'}
+
 
 ]
 const router = new VueRouter({

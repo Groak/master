@@ -1,6 +1,7 @@
 <template>
   <div class="page">
     <h1>{{ recipe.nom }}</h1>
+
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-6 recipe-img">
@@ -11,31 +12,19 @@
             <div class="icon d-flex justify-content-center">
               <img src="../assets/dollar.png" alt="" />
             </div>
-            <p>{{ Math.round((2*getprice(recipe))/recipe.nombre) }} €</p>
+            <p>{{ Math.round((2 * getprice(recipe)) / recipe.nombre) }} €</p>
           </div>
           <div class="info d-flex">
             <div class="icon d-flex justify-content-center">
               <img src="../assets/clock.png" alt="" />
             </div>
-            <p>{{time_convert(recipe.temps)}}</p>
-
+            <p>{{ time_convert(recipe.temps) }}</p>
           </div>
-          <div class="info d-flex">
-            <div class="icon d-flex justify-content-center">
-              <img src="../assets/red user.png" alt="" />
-            </div>
-            <select name="" id="">
-              <option v-for="(n,i) in 8" :key="i"
-              :value="n">{{n}}</option>
-            
-            </select>
-
-          </div>
+         
           <div class="info d-flex">
             <div v-for="tag in recipe.tags" :key="tag" class="tags">
-              <p>{{tag}}</p>
+              <p>{{ tag }}</p>
             </div>
-
           </div>
         </div>
       </div>
@@ -52,13 +41,18 @@
       <div class="w-100 d-flex justify-content-center">
         <ul class="text-left">
           <li v-for="ingredient in recipe.ingredients" :key="ingredient.id">
-            <span>{{ingredient.quantity}} </span><span>{{ ingredient.name }}</span>
+            <span>{{ ingredient.quantity }} </span
+            ><span>{{ ingredient.name }}</span>
           </li>
         </ul>
       </div>
 
       <div class="d-flex justify-content-center w-100">
-        <button>+ add to your shopping list</button>
+        <button v-if="clicked==false" @click="addfav(recipe)">+ add to your shopping list</button>
+        <div v-else>
+          <p>La gourmande recette de {{recipe.nom}} est bien ajoutée à vos favoris !</p>
+          <img src="../assets/check.png" alt="">
+        </div>
       </div>
     </div>
     <div class="container-fluid recipe-section">
@@ -77,7 +71,7 @@
             v-for="(etape, i) in recipe.etapes"
             :key="i"
           >
-            <p class="step-title">- step {{ i+1 }}:</p>
+            <p class="step-title">- step {{ i + 1 }}:</p>
             <p class="step">{{ etape }}</p>
           </div>
         </div>
@@ -95,6 +89,7 @@ export default {
       recipe: {},
       ingredients: [],
       loaded: false,
+      clicked:false
     };
   },
   mounted() {
@@ -107,8 +102,7 @@ export default {
       .then(
         (response) => ((this.ingredients = response.data), (this.loaded = true))
       );
-      console.log(this.time_convert(70))
-      
+    console.log(this.time_convert(70));
   },
   methods: {
     getprice(recipe) {
@@ -118,9 +112,8 @@ export default {
           var ing = this.ingredients.find(
             (x) => x.name == recipe.ingredients[i].name
           );
-  
-        
-          price += (ing.prix * Math.ceil(recipe.ingredients[i].quantity/ing.quantité));
+          price +=
+            ing.prix * Math.ceil(recipe.ingredients[i].quantity / ing.quantité);
         }
         return price;
       }
@@ -128,14 +121,26 @@ export default {
     time_convert(num) {
       var hours = Math.floor(num / 60);
       var minutes = num % 60;
-      if(hours == 0){
-        var time = String(minutes + "min")
-      }else if(minutes == 0){
-        time = String(hours + "h")
-      }else{
-        time = String(hours + "h" + minutes + "min")
+      if (hours == 0) {
+        var time = String(minutes + "min");
+      } else if (minutes == 0) {
+        time = String(hours + "h");
+      } else {
+        time = String(hours + "h" + minutes + "min");
       }
       return time;
+    },
+    async addfav(recipe) {
+      this.clicked = true
+      this.$http
+        .put("http://localhost:3000/logged/1", {
+          user: {
+            planned: [0, 1, 0, 3, 4],
+            favorites:  [0, 1, 0, 3, 4, recipe.id],
+          },
+          id: 1,
+        })
+        .then((response) => console.log(response));
     },
   },
 };
@@ -165,13 +170,12 @@ h1 {
   font-weight: bold;
   font-style: italic;
 }
-.tags{
-
+.tags {
   background-color: #f6e9e6;
   padding: 2px 10px 2px 10px;
   border-radius: 15px;
   margin: 10px 10px 0px 0px;
-  color: #CC513F;
+  color: #cc513f;
 }
 .description p {
   font-weight: bold;

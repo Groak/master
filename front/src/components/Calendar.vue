@@ -5,17 +5,21 @@
     </div>
     <div class="container">
       <div class="row d-flex justify-content-around">
-        <div v-for="(recipe, index) in recipes" :key="index">
+        
+        <div v-for="(p, index) in changed_planning" :key="index" class="col-4 d-flex justify-content-center">
+         <div>
+            <div>
+            
+          </div>
           <Day
-            :id="recipe.id"
-            :name="recipe.nom"
-            :image="recipe.image"
+            :id="recipes[p].id"
+            :name="recipes[p].nom"
+            :image="recipes[p].image"
             :day="days[index]"
           />
           <select
             name="recipes"
             v-model="changed_planning[index]"
-            @click="updateplanning()"
           >
             <option
               v-for="(recipe, i) in recipes"
@@ -24,16 +28,18 @@
               >{{ recipe.nom }}</option
             >
           </select>
-          <p>{{ changed_planning[index] }}</p>
         </div>
+         </div>
       </div>
     </div>
+    <router-link :to="{ name: 'list', params: { ref: changed_planning.join('') } }">
+        <button >Generate list</button>
+    </router-link>
     <carousel class="carousel" :perPage="5">
       <slide v-for="(recipe, j) in carousel" :key="j">
         <router-link :to="{ name: 'recipe', params: { id: recipe.id } }"
-                ><img :src="recipe.image" alt="" class="img"/></router-link
-              >
-        
+          ><img :src="recipes[recipe].image" alt="" class="img"
+        /></router-link>
       </slide>
     </carousel>
   </div>
@@ -48,70 +54,35 @@ export default {
   },
   data() {
     return {
-    ingredients: null,
-
-      changed_planning: null,
-      planning: null,
+      ingredients: null,
+      changed_planning: [0,1,2,3,4],
+      planning: [0, 1, 2, 3],
       recipes: null,
-      carousel: null,
+      carousel: [0, 1, 2,3,7,8,11],
       loaded: false,
       days: ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"],
     };
   },
-  async mounted() {
-    var array = [];
-    this.$http
-      .get("http://localhost:3000/ingredients")
-      .then((response) => (this.ingredients = response.data));
-    this.$http
-      .get("http://localhost:3000/recettes/")
-      .then((response) => (this.carousel = response.data));
-
-    const res = await this.$http.get("http://localhost:3000/logged");
-    this.planning = res.data[0].user.planning;
-    this.changed_planning = res.data[0].user.planning;
-
-    console.log(this.favorites);
-    this.planning.forEach((element) => {
+  mounted(){
+     this.$http
+      .get("http://localhost:3000/logged/1")
+      .then((response) => (this.planning = response.data.user.planned));
       this.$http
-        .get("http://localhost:3000/recettes/" + element)
-        .then((response) => array.push(response.data), (this.loaded = true));
-    });
-    console.log(array);
-    this.recipes = array;
-  },
-  method: {
-    async updateplanning() {
-      const res = await this.$http.patch("http://localhost:3000/logged/1", {
-        user: {
-          planned: this.changed_planning,
-        },
-      });
-      console.log(res.data);
-    },
-     getprice(recipe) {
-      if (this.loaded) {
-          console.log("hi")
-        var price = 0;
-        for (let i = 0; i < recipe.ingredients.length; i++) {
-          var ing = this.ingredients.find(
-            (x) => x.name == recipe.ingredients[i].name
-          );
-          price += (ing.prix * Math.ceil(recipe.ingredients[i].quantity/ing.quantité));
-        }
-        return price;
-      }else{
-          console.log("hello")
-          return 0;
-      }
-    },
-  },
+      .get("http://localhost:3000/recettes")
+      .then((response) => (this.recipes = response.data));
+  }
 };
 </script>
 
 <style>
-.img{
-    height:200px;
-    width: 200px;
+.img {
+  height: 200px;
+  width: 200px;
+}
+.recipte-card{
+  width:150px;
+}
+button{
+  margin: 20px 0px 15px 0px;
 }
 </style>

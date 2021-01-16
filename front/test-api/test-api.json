@@ -950,16 +950,665 @@
   "logged": [
     {
       "user": {
-        "email": "lea",
-        "password": "lea",
-        "name": "lea",
-        "favorites": [0,2,3],
-        "budget": 0,
-        "planning": [0,1,2,3,4],
-        "list": [],
-        "id": 3
+        "planned": [
+          0,
+          1,
+          0,
+          3,
+          4
+        ],
+        "favorites":[
+          1,
+          2,
+          4,
+          9
+        ]
       },
       "id": 1
     }
+  ],
+  "order": [
+    [
+      {
+        "reference": "spq9ui",
+        "product": "riz",
+        "quantity": 0.5
+      },
+      {
+        "reference": "bn8x0u",
+        "product": "calamar",
+        "quantity": 0.5
+      },
+      {
+        "reference": "ci8e8o",
+        "product": "moules",
+        "quantity": 0.1
+      },
+      {
+        "reference": "hrd9de",
+        "product": "crevettes",
+        "quantity": 0.1
+      },
+      {
+        "reference": "duq2s",
+        "product": "tomates",
+        "quantity": 1.3
+      },
+      {
+        "reference": "414arn",
+        "product": "oignon",
+        "quantity": 3
+      },
+      {
+        "reference": "f7ua8x",
+        "product": "gousses d'ail",
+        "quantity": 0.5
+      },
+      {
+        "reference": "71cfvk",
+        "product": "huile",
+        "quantity": 0.001
+      },
+      {
+        "reference": "jruerq",
+        "product": "bouillon",
+        "quantity": 4
+      },
+      {
+        "reference": "9wjwz8",
+        "product": "pomme",
+        "quantity": 4
+      },
+      {
+        "reference": "52l66g",
+        "product": "sucre",
+        "quantity": 0.2
+      },
+      {
+        "reference": "ir947",
+        "product": "tranche de pain de mie",
+        "quantity": 2
+      },
+      {
+        "reference": "vulvoe",
+        "product": "beurre",
+        "quantity": 0.005
+      },
+      {
+        "reference": "391xo",
+        "product": "tranche de jambon blanc",
+        "quantity": 4
+      },
+      {
+        "reference": "v5ikm5",
+        "product": "gruyère",
+        "quantity": 0.01
+      },
+      {
+        "reference": "msltq9",
+        "product": "poivron",
+        "quantity": 3
+      },
+      {
+        "reference": "pav3ft",
+        "product": "concombre",
+        "quantity": 1.5
+      },
+      {
+        "reference": "9yxn6k",
+        "product": "vinaigre",
+        "quantity": 0.001
+      },
+      {
+        "reference": "ykqper",
+        "product": "oeuf",
+        "quantity": 0.3
+      },
+      {
+        "reference": "5s7v9q",
+        "product": "basilic",
+        "quantity": 1
+      },
+      {
+        "reference": "bdhrtc",
+        "product": "huile d'olive",
+        "quantity": 0.005
+      }
+    ],
+    [
+      {
+        "reference": "uzi3kh",
+        "product": "riz",
+        "quantity": 0.5
+      },
+      {
+        "reference": "ldn94",
+        "product": "calamar",
+        "quantity": 0.5
+      },
+      {
+        "reference": "pdhh1p",
+        "product": "moules",
+        "quantity": 0.1
+      },
+      {
+        "reference": "h6f8f",
+        "product": "crevettes",
+        "quantity": 0.1
+      },
+      {
+        "reference": "kxzhhl",
+        "product": "tomates",
+        "quantity": 1.3
+      },
+      {
+        "reference": "pww29z",
+        "product": "oignon",
+        "quantity": 3
+      },
+      {
+        "reference": "uznt3h",
+        "product": "gousses d'ail",
+        "quantity": 0.5
+      },
+      {
+        "reference": "ggm82u",
+        "product": "huile",
+        "quantity": 0.001
+      },
+      {
+        "reference": "2zpco",
+        "product": "bouillon",
+        "quantity": 4
+      },
+      {
+        "reference": "mfylzo",
+        "product": "pomme",
+        "quantity": 4
+      },
+      {
+        "reference": "wvzwx",
+        "product": "sucre",
+        "quantity": 0.2
+      },
+      {
+        "reference": "zpb7q",
+        "product": "tranche de pain de mie",
+        "quantity": 2
+      },
+      {
+        "reference": "bd26g8",
+        "product": "beurre",
+        "quantity": 0.005
+      },
+      {
+        "reference": "s8xqi",
+        "product": "tranche de jambon blanc",
+        "quantity": 4
+      },
+      {
+        "reference": "9hlzeg",
+        "product": "gruyère",
+        "quantity": 0.01
+      },
+      {
+        "reference": "f0y533",
+        "product": "poivron",
+        "quantity": 3
+      },
+      {
+        "reference": "73ksin",
+        "product": "concombre",
+        "quantity": 1.5
+      },
+      {
+        "reference": "6sxo9",
+        "product": "vinaigre",
+        "quantity": 0.001
+      },
+      {
+        "reference": "uk427e",
+        "product": "oeuf",
+        "quantity": 0.3
+      },
+      {
+        "reference": "cm1vgx",
+        "product": "basilic",
+        "quantity": 1
+      },
+      {
+        "reference": "sxui4",
+        "product": "huile d'olive",
+        "quantity": 0.005
+      }
+    ],
+    [
+      {
+        "reference": "79urr",
+        "product": "riz",
+        "quantity": 0.5
+      },
+      {
+        "reference": "iljkfb",
+        "product": "calamar",
+        "quantity": 0.5
+      },
+      {
+        "reference": "68s60r",
+        "product": "moules",
+        "quantity": 0.1
+      },
+      {
+        "reference": "jc8au",
+        "product": "crevettes",
+        "quantity": 0.1
+      },
+      {
+        "reference": "3fczan",
+        "product": "tomates",
+        "quantity": 1.3
+      },
+      {
+        "reference": "8zlb7d",
+        "product": "oignon",
+        "quantity": 3
+      },
+      {
+        "reference": "fqnwzr",
+        "product": "gousses d'ail",
+        "quantity": 0.5
+      },
+      {
+        "reference": "kugyqc",
+        "product": "huile",
+        "quantity": 0.001
+      },
+      {
+        "reference": "6m2er",
+        "product": "bouillon",
+        "quantity": 4
+      },
+      {
+        "reference": "kmhimt",
+        "product": "pomme",
+        "quantity": 4
+      },
+      {
+        "reference": "v41u2o",
+        "product": "sucre",
+        "quantity": 0.2
+      },
+      {
+        "reference": "xl47jy",
+        "product": "tranche de pain de mie",
+        "quantity": 2
+      },
+      {
+        "reference": "897ue",
+        "product": "beurre",
+        "quantity": 0.005
+      },
+      {
+        "reference": "zmz1kr",
+        "product": "tranche de jambon blanc",
+        "quantity": 4
+      },
+      {
+        "reference": "xfk1oi",
+        "product": "gruyère",
+        "quantity": 0.01
+      },
+      {
+        "reference": "jgd6hc",
+        "product": "poivron",
+        "quantity": 3
+      },
+      {
+        "reference": "k9yh8",
+        "product": "concombre",
+        "quantity": 1.5
+      },
+      {
+        "reference": "z6kfz7",
+        "product": "vinaigre",
+        "quantity": 0.001
+      },
+      {
+        "reference": "beyon",
+        "product": "oeuf",
+        "quantity": 0.3
+      },
+      {
+        "reference": "f6r7b",
+        "product": "basilic",
+        "quantity": 1
+      },
+      {
+        "reference": "pev62m",
+        "product": "huile d'olive",
+        "quantity": 0.005
+      }
+    ],
+    [
+      {
+        "reference": "fzr8ut",
+        "product": "riz",
+        "quantity": 0.5
+      },
+      {
+        "reference": "0t3ov",
+        "product": "calamar",
+        "quantity": 0.5
+      },
+      {
+        "reference": "h0rk4v",
+        "product": "moules",
+        "quantity": 0.1
+      },
+      {
+        "reference": "carvj",
+        "product": "crevettes",
+        "quantity": 0.1
+      },
+      {
+        "reference": "5r9woc",
+        "product": "tomates",
+        "quantity": 1.3
+      },
+      {
+        "reference": "nx24tf",
+        "product": "oignon",
+        "quantity": 3
+      },
+      {
+        "reference": "7sdq6d",
+        "product": "gousses d'ail",
+        "quantity": 0.5
+      },
+      {
+        "reference": "6suhbj",
+        "product": "huile",
+        "quantity": 0.001
+      },
+      {
+        "reference": "ekov6",
+        "product": "bouillon",
+        "quantity": 4
+      },
+      {
+        "reference": "l6gyej",
+        "product": "pomme",
+        "quantity": 4
+      },
+      {
+        "reference": "uu97za",
+        "product": "sucre",
+        "quantity": 0.2
+      },
+      {
+        "reference": "qmrcbe",
+        "product": "tranche de pain de mie",
+        "quantity": 2
+      },
+      {
+        "reference": "mq4w4n",
+        "product": "beurre",
+        "quantity": 0.005
+      },
+      {
+        "reference": "tt4b8",
+        "product": "tranche de jambon blanc",
+        "quantity": 4
+      },
+      {
+        "reference": "csnwy7",
+        "product": "gruyère",
+        "quantity": 0.01
+      },
+      {
+        "reference": "3g5wqp",
+        "product": "poivron",
+        "quantity": 3
+      },
+      {
+        "reference": "zztr3n",
+        "product": "concombre",
+        "quantity": 1.5
+      },
+      {
+        "reference": "7bkn4g",
+        "product": "vinaigre",
+        "quantity": 0.001
+      },
+      {
+        "reference": "90mhjg",
+        "product": "oeuf",
+        "quantity": 0.3
+      },
+      {
+        "reference": "r6k0sf",
+        "product": "basilic",
+        "quantity": 1
+      },
+      {
+        "reference": "8ggdzd",
+        "product": "huile d'olive",
+        "quantity": 0.005
+      }
+    ],
+    [
+      {
+        "reference": "eid0vl",
+        "product": "riz",
+        "quantity": 0.5
+      },
+      {
+        "reference": "4ggpb",
+        "product": "calamar",
+        "quantity": 0.5
+      },
+      {
+        "reference": "vxyvl3",
+        "product": "moules",
+        "quantity": 0.1
+      },
+      {
+        "reference": "ydn53l",
+        "product": "crevettes",
+        "quantity": 0.1
+      },
+      {
+        "reference": "hizfh",
+        "product": "tomates",
+        "quantity": 1.3
+      },
+      {
+        "reference": "l2o48e",
+        "product": "oignon",
+        "quantity": 3
+      },
+      {
+        "reference": "f6y9i4",
+        "product": "gousses d'ail",
+        "quantity": 0.5
+      },
+      {
+        "reference": "q06jq",
+        "product": "huile",
+        "quantity": 0.001
+      },
+      {
+        "reference": "sxdz8",
+        "product": "bouillon",
+        "quantity": 4
+      },
+      {
+        "reference": "wqa9z4",
+        "product": "pomme",
+        "quantity": 4
+      },
+      {
+        "reference": "uxo0e3",
+        "product": "sucre",
+        "quantity": 0.2
+      },
+      {
+        "reference": "1853o7",
+        "product": "tranche de pain de mie",
+        "quantity": 2
+      },
+      {
+        "reference": "b44ma6",
+        "product": "beurre",
+        "quantity": 0.005
+      },
+      {
+        "reference": "2eyjf",
+        "product": "tranche de jambon blanc",
+        "quantity": 4
+      },
+      {
+        "reference": "x8t662",
+        "product": "gruyère",
+        "quantity": 0.01
+      },
+      {
+        "reference": "ehcx5l",
+        "product": "poivron",
+        "quantity": 3
+      },
+      {
+        "reference": "w0tl5m",
+        "product": "concombre",
+        "quantity": 1.5
+      },
+      {
+        "reference": "rdj4g",
+        "product": "vinaigre",
+        "quantity": 0.001
+      },
+      {
+        "reference": "85pjf",
+        "product": "oeuf",
+        "quantity": 0.3
+      },
+      {
+        "reference": "niobl",
+        "product": "basilic",
+        "quantity": 1
+      },
+      {
+        "reference": "uxmkr",
+        "product": "huile d'olive",
+        "quantity": 0.005
+      }
+    ],
+    [
+      {
+        "reference": "44h0g",
+        "product": "riz",
+        "quantity": 0.5
+      },
+      {
+        "reference": "25jru",
+        "product": "calamar",
+        "quantity": 0.5
+      },
+      {
+        "reference": "k99t9g",
+        "product": "moules",
+        "quantity": 0.1
+      },
+      {
+        "reference": "04v6xv",
+        "product": "crevettes",
+        "quantity": 0.1
+      },
+      {
+        "reference": "w95xa",
+        "product": "tomates",
+        "quantity": 1.3
+      },
+      {
+        "reference": "3ent3l",
+        "product": "oignon",
+        "quantity": 3
+      },
+      {
+        "reference": "1zrjrd",
+        "product": "gousses d'ail",
+        "quantity": 0.5
+      },
+      {
+        "reference": "4glji8",
+        "product": "huile",
+        "quantity": 0.001
+      },
+      {
+        "reference": "sbdhg",
+        "product": "bouillon",
+        "quantity": 4
+      },
+      {
+        "reference": "hhulsr",
+        "product": "pomme",
+        "quantity": 4
+      },
+      {
+        "reference": "dfzhtl",
+        "product": "sucre",
+        "quantity": 0.2
+      },
+      {
+        "reference": "ucuu1g",
+        "product": "tranche de pain de mie",
+        "quantity": 2
+      },
+      {
+        "reference": "py1g8m",
+        "product": "beurre",
+        "quantity": 0.005
+      },
+      {
+        "reference": "w3gb5p",
+        "product": "tranche de jambon blanc",
+        "quantity": 4
+      },
+      {
+        "reference": "fh0jks",
+        "product": "gruyère",
+        "quantity": 0.01
+      },
+      {
+        "reference": "xzfzqj",
+        "product": "poivron",
+        "quantity": 3
+      },
+      {
+        "reference": "0ujj7v",
+        "product": "concombre",
+        "quantity": 1.5
+      },
+      {
+        "reference": "nsmwkd",
+        "product": "vinaigre",
+        "quantity": 0.001
+      },
+      {
+        "reference": "mf2n5",
+        "product": "oeuf",
+        "quantity": 0.3
+      },
+      {
+        "reference": "h2cof",
+        "product": "basilic",
+        "quantity": 1
+      },
+      {
+        "reference": "pyg0og",
+        "product": "huile d'olive",
+        "quantity": 0.005
+      }
+    ]
   ]
 }

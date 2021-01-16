@@ -1,3 +1,4 @@
+@@ -0,0 +1,182 @@
 <template>
   <div
     class="nav"
@@ -10,7 +11,9 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-3 d-flex justify-content-start">
+           <router-link to="/">
           <img src="./logo.png" alt="logo" class="navlogo" />
+           </router-link>
         </div>
         <div class="col-6 ">
           <div class="searchbar d-flex">
@@ -23,53 +26,49 @@
               >
                 <option
                   class="d-inline-block"
-                  v-for="(facility,index) in selectedFacilities"
-                  v-bind:value="facility"
-                  :key="index + 2"
+                  v-for="facility in selectedFacilities"
+                  v-bind:value="facility.value"
+                  :key="facility.value + 2"
                   @click.prevent="removeFacilities"
                   >{{ facility.text }}</option
                 >
               </select>
             </div>
           </div>
-          <div v-if="clicked" class="d-flex justify-content-between">
-            <div class="available">
-              <p class="text-left">diet</p>
-              <select
-                v-model="availableFacilitiesSelectedValues"
-                multiple="multiple"
-                class="available_options"
-              >
-                <option
-                  v-for="(tag,index) in tags"
-                  v-bind:value="index"
-                  :key="index+ 1"
-                  @click.prevent="addFacilities"
-                  >{{ tag }}</option
+          <div v-if="clicked" class="d-flex justify-content-start">
+            <div class="available d-flex justify-content-between w-100">
+              <div>
+                <p class="text-left">diet</p>
+                <select
+                  v-model="availableFacilitiesSelectedValues"
+                  multiple="multiple"
+                  class="available_options"
                 >
-              </select>
-            </div>
-            <div class="search">
-              <button>
-                <router-link
-                  :to="{
-                    name: 'recipesearch',
-                    params: { criteria: selectedFacilities[0] },
-                  }"
-                >
-                  Search</router-link
-                >
-              </button>
+                  <option
+                    v-for="facility in availableFacilities"
+                    v-bind:value="facility.value"
+                    :key="facility.value + 1"
+                    @click.prevent="addFacilities"
+                    >{{ facility.text }}</option
+                  >
+                </select>
+              </div>
+              <div>
+                <button @click="search()">Rechercher</button>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-3 d-flex justify-content-around icons">
-          <img src="./search.png" alt="" />
+          <router-link to="/favorites">
           <img src="./heart.png" alt="" />
+          </router-link>
+          <router-link to="/calendar">
           <img src="./cal.png" alt="" />
-          <img src="./cart.png" alt="" />
-
+          </router-link>
+          <router-link to="/login">
           <img src="./user.png" alt="" />
+          </router-link>
         </div>
       </div>
     </div>
@@ -82,71 +81,46 @@ export default {
   data() {
     return {
       clicked: false,
-      tags: [],
       availableFacilities: [
         {
           value: 1,
-          text: "veggie",
+          text: "vegetarian",
         },
         {
           value: 2,
-          text: "gluten free",
+          text: "gluten-free",
         },
         {
           value: 3,
-          text: "vegan",
-        },
-        {
-          value: 4,
           text: "sugar-free",
         },
+         {
+          value: 4,
+          text: "no-oven",
+        }
       ],
       selectedFacilities: [],
       availableFacilitiesSelectedValues: [],
       selectedFacilitiesSelectedValues: [],
     };
   },
-  mounted() {
-    this.$http.get("http://localhost:3000/recettes").then((response) =>
-      response.data.forEach((e) => {
-        e.tags.forEach((e) => {
-          this.tags.push(e);
-          this.tags = this.uniqueArray(this.tags);
-        });
-      })
-    );
-  },
   methods: {
-    uniqueArray: function(arr) {
-      var a = [];
-      for (var i = 0, l = arr.length; i < l; i++)
-        if (a.indexOf(arr[i]) === -1 && arr[i] !== "") a.push(arr[i]);
-      return a;
-    },
-    sendMessage: function(event) {
-      if (event.key === "Enter") {
-        console.log("New line added, message not sended");
-        return;
-      }
-    },
     move(value, arrFrom, arrTo) {
       var index = arrFrom.findIndex(function(el) {
-        return el == arrFrom[value];
+        return el.value == value;
       });
-      console.log(index)
       var item = arrFrom[index];
 
       arrFrom.splice(index, 1);
       arrTo.push(item);
     },
-
     addFacilities() {
       var selected = this.availableFacilitiesSelectedValues.slice(0);
 
       for (var i = 0; i < selected.length; ++i) {
         this.move(
           selected[i],
-          this.tags,
+          this.availableFacilities,
           this.selectedFacilities
         );
       }
@@ -158,10 +132,21 @@ export default {
         this.move(
           selected[i],
           this.selectedFacilities,
-          this.tags
+          this.availableFacilities
         );
       }
     },
+    search(){
+      var criteria = []
+      this.selectedFacilities.forEach(e => {
+        criteria.push(e.text)
+      });
+      criteria = criteria.join('+')
+      console.log(this.selected)
+      console.log(criteria)
+      window.location.replace("http://localhost:8080/#/recipes/search/"+criteria);
+      window.focus()
+    }
   },
 };
 </script>
@@ -222,8 +207,5 @@ export default {
   height: 20px;
   width: auto;
   margin: 10px 0px 0px 30px;
-}
-.search {
-  margin-top: 10px;
 }
 </style>
